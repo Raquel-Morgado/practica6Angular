@@ -1,1 +1,14 @@
-<p>card-user works!</p>
+<div class="container mt-5">
+    <!-- Card del Usuario -->
+    <div class="card" style="max-width: 18rem;">
+      <img src="{{currentUser.image}}" class="card-img-top" alt="Imagen de Usuario">
+      <div class="card-body">
+            <h5 class="card-title">{{currentUser.first_name}} {{currentUser.last_name}}</h5> <!-- Nombre Completo -->
+            <p class="card-text">
+            <strong>Username:</strong> {{currentUser.username}} <br> <!-- Username -->
+            <strong>Email:</strong> {{currentUser.email}} <!-- Email -->
+            </p>
+            <app-buttons [user]="currentUser" [volver]="false" (deleteItemEmit)="deleteUser($event)"></app-buttons>
+      </div>
+    </div>
+  </div>

@@ -1,1 +1,13 @@
-<p>buttons works!</p>
+<div class="d-flex justify-content-between gap-1">
+    <button class="btn btn-primary btn-sm text-white  rounded" (click)="updateUser(user?._id)">
+        Editar
+    </button>
+
+    <button class="btn btn-danger btn-sm text-white   rounded" (click)="deleteUser(user?._id)">
+        Borrar
+    </button>
+
+    <button class="btn btn-success btn-sm text-white   rounded" (click)="verUser(user?._id)">
+        Ver Detalle
+    </button>
+</div>

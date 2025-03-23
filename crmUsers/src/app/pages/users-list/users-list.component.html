@@ -1,1 +1,31 @@
-<p>users-list works!</p>
+<div>
+    <div class="row g-4 justify-content-center">
+        @for (user of users; track user.id) {
+            <article class="col-12 col-md-6 col-lg-3">
+            <app-card-user [currentUser]="user" (deleteItemEmit)="deleteUser($event)"></app-card-user>
+            </article>
+        }
+    
+    </div>
+    
+    <div class="container mt-5">
+        <!-- Paginación con botones prev y next -->
+        <nav aria-label="Paginación">
+          <ul class="pagination">
+            <!-- Botón "Prev" -->
+            <li class="page-item">
+              <button class="page-link" (click)="gotoPrev()" >
+                Prev
+              </button>
+            </li>
+            
+            <!-- Botón "Next" -->
+            <li class="page-item">
+              <button class="page-link" (click)="gotoNext()" >
+                Next
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+</div>
