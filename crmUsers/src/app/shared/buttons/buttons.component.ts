@@ -25,8 +25,10 @@ export class ButtonsComponent {
           await this.userService.delete(id)
           if (this.deleteItemEmit.observed) {
             this.deleteItemEmit.emit(true)
+            toast.success('Eliminado correctamente')
           } else {
             this.router.navigate(['/home'])
+            toast.success('No se ha podido eliminar')
           }
 
         }

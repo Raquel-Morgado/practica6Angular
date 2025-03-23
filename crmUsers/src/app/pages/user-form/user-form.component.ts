@@ -41,7 +41,7 @@ export class UserFormComponent {
       });
     }
     async ngOnInit(){
-      console.log(this.id)
+      
       if (this.id === undefined) {
         this.text= "Registrar"
       } else {
