@@ -7,7 +7,13 @@
         Borrar
     </button>
 
-    <button class="btn btn-success btn-sm text-white   rounded" (click)="verUser(user?._id)">
-        Ver Detalle
-    </button>
+    @if(volver){
+        <button class="btn btn-success btn-sm text-white   rounded" (click)="goToHome()">
+            Volver
+        </button>
+        }@else{
+            <button class="btn btn-success btn-sm text-white   rounded" (click)="verUser(user?._id)">
+                Ver Detalle
+            </button>
+        }
 </div>

@@ -59,4 +59,8 @@ export class ButtonsComponent {
   verUser(id: string) {
     this.router.navigate(['/user', this.user._id])
   }
+
+  goToHome() {
+    this.router.navigate(['/home'])
+}
 }
