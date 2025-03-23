@@ -16,12 +16,12 @@
   
     <div class="form-group">
       <label for="email">Correo Electrónico</label>
-      <input type="email" id="email" name="email" ngModel class="form-control" required  value="{{user.email}}" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})">
+      <input type="email" id="email" name="email" ngModel class="form-control" required  value="{{user.email}}" >
     </div>
   
     <div class="form-group">
       <label for="image">Imagen (URL)</label>
-      <input type="text" id="image" name="image" ngModel class="form-control" required value="{{user.image}}" pattern="https?://.+\.(jpg|jpeg|png|gif|bmp|webp|svg)$">
+      <input type="url" id="image" name="image" ngModel class="form-control" required value="{{user.image}}" >
     </div>
   
     <button type="submit" class="btn btn-primary mt-3">{{text}}</button>

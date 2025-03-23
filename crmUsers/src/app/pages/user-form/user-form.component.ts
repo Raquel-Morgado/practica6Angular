@@ -41,18 +41,12 @@ export class UserFormComponent {
     }
     async getDataForm(userForm: NgForm) {
       let newUser: Iuser = userForm.value;
-      if (userForm.valid) {
-        
-        newUser._id=this.id;
-        //llamar al servicio para guardar los datos en la base
-        let response :Iuser = await this.userService.updateUser(newUser);
-        this.router.navigate(['/user', this.id])
-        userForm.reset();
-        toast.success('Usuario creado');
-  
-      }else{
-        toast.error('Formulacio incorrecto');
-      }
+      newUser._id=this.id;
+      //llamar al servicio para guardar los datos en la base
+      let response :Iuser = await this.userService.updateUser(newUser);
+      this.router.navigate(['/user', this.id])
+      userForm.reset();
+      toast.success('Usuario creado');
 
     }
 
